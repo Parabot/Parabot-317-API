@@ -18,14 +18,7 @@ import org.rev317.core.Injector;
 import org.rev317.script.ScriptEngine;
 import org.rev317.utils.BotMenu;
 
-/**
- * 
- * This is a loader for a an unobfuscated 317 server
- * 
- * @author Clisprail
- *
- */
-@ServerManifest(author = "Clisprail", name = "DeviousPk", type = Type.INJECTION, version = 0.1)
+@ServerManifest(author = "Your Name", name = "The Server Name", type = Type.INJECTION, version = 0.1)
 public class Loader extends ServerProvider implements Opcodes {
 	private Applet applet = null;
 
@@ -65,7 +58,7 @@ public class Loader extends ServerProvider implements Opcodes {
 	public URL getJar() {
 		try {
 			// the location of the uninjected jar, if you store the jar on your pc use File.toURI().toURL();
-			return new URL("http://bot.parabot.org/servers/DeviousPk.jar");
+			return new URL("Client Url Here");
 		} catch (MalformedURLException e) {
 			throw new RuntimeException(e);
 		}
@@ -75,7 +68,7 @@ public class Loader extends ServerProvider implements Opcodes {
 	public URL getHooks() {
 		try {
 			// the location of the hooks file, if you store the jar on your pc use File.toURI().toURL();
-			return new URL("http://bot.parabot.org/hooks/317hooks.xml");
+			return new URL("The XML URL Here");
 		} catch (MalformedURLException e) {
 			throw new RuntimeException(e);
 		}
