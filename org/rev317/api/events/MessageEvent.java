@@ -2,7 +2,7 @@ package org.rev317.api.events;
 
 /**
  * 
- * @author Clisprail, Matt
+ * @author Everel, Matt
  * 
  */
 public final class MessageEvent {

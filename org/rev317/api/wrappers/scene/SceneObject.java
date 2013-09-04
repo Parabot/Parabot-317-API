@@ -12,13 +12,14 @@ import org.rev317.api.interfaces.Locatable;
 import org.rev317.api.methods.Calculations;
 import org.rev317.api.methods.Game;
 import org.rev317.api.methods.Menu;
+import org.rev317.api.wrappers.defs.ObjectDef;
 import org.rev317.api.wrappers.renderable.Model;
 import org.rev317.api.wrappers.renderable.SceneObjectModel;
-import org.rev317.loader.Loader;
+import org.rev317.Loader;
 
 /**
  * 
- * @author Clisprail
+ * @author Everel
  *
  */
 public final class SceneObject implements Locatable, Interactable {
@@ -89,6 +90,14 @@ public final class SceneObject implements Locatable, Interactable {
 	 */
 	public final int getId() {
 		return getHash() >> 14 & 0x7fff;
+	}
+	
+	/**
+	 * Gets item's definition
+	 * @return item's definition
+	 */
+	public final ObjectDef getDef() {
+		return ObjectDef.get(this.getId());
 	}
 	
 	/**

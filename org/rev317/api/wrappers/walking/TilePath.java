@@ -9,7 +9,7 @@ import org.rev317.api.wrappers.scene.Tile;
 
 /**
  * 
- * @author Clisprail
+ * @author Everel
  *
  */
 public final class TilePath {

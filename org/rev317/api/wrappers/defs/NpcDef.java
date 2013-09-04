@@ -2,7 +2,7 @@ package org.rev317.api.wrappers.defs;
 
 /**
  * 
- * @author Clisprail
+ * @author Everel
  *
  */
 public final class NpcDef {

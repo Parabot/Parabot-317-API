@@ -7,7 +7,7 @@ import org.rev317.api.wrappers.interactive.Npc;
 
 /**
  * 
- * @author Clisprail
+ * @author Everel
  *
  */
 public class DNpcs extends AbstractDebugger {

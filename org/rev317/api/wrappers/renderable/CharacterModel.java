@@ -4,7 +4,7 @@ import org.rev317.api.methods.Calculations;
 
 /**
  * 
- * @author Clisprail
+ * @author Everel
  * 
  */
 public final class CharacterModel extends Model {

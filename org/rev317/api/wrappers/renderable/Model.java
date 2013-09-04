@@ -11,7 +11,7 @@ import org.rev317.api.methods.Calculations;
 
 /**
  * 
- * @author Clisprail
+ * @author Everel
  * @author Matt
  * 
  */

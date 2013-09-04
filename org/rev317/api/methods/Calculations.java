@@ -6,15 +6,16 @@ import java.util.Random;
 
 import org.parabot.core.Context;
 import org.parabot.core.parsers.HookParser;
+import org.rev317.Loader;
 import org.rev317.accessors.Client;
 import org.rev317.api.wrappers.scene.Tile;
-import org.rev317.loader.Loader;
+
 
 /**
  * 
  * Class which does all the calculations
  * 
- * @author Clisprail
+ * @author Everel
  *
  */
 public final class Calculations {

@@ -9,12 +9,12 @@ import org.parabot.core.parsers.HookParser;
 import org.parabot.environment.api.utils.Time;
 import org.parabot.environment.input.Mouse;
 import org.rev317.accessors.Client;
-import org.rev317.loader.Loader;
+import org.rev317.Loader;
 
 
 /**
  * 
- * @author Clisprail
+ * @author Everel
  *
  */
 public final class Menu {

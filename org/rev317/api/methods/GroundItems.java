@@ -9,11 +9,11 @@ import org.rev317.accessors.Client;
 import org.rev317.accessors.Deque;
 import org.rev317.accessors.Node;
 import org.rev317.api.wrappers.scene.GroundItem;
-import org.rev317.loader.Loader;
+import org.rev317.Loader;
 
 /**
  * 
- * @author Clisprail
+ * @author Everel
  * 
  */
 public final class GroundItems {

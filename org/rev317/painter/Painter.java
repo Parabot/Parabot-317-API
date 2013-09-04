@@ -13,7 +13,7 @@ import org.rev317.accessors.Client;
 
 /**
  * 
- * @author Clisprail, Matt, Dane
+ * @author Everel, Matt, Dane
  * 
  */
 public abstract class Painter extends ImageProducer {

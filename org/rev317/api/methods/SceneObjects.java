@@ -11,10 +11,10 @@ import org.rev317.accessors.Scene;
 import org.rev317.accessors.SceneObjectTile;
 import org.rev317.accessors.SceneTile;
 import org.rev317.api.wrappers.scene.SceneObject;
-import org.rev317.loader.Loader;
+import org.rev317.Loader;
 /**
  * 
- * @author Clisprail
+ * @author Everel
  *
  */
 public final class SceneObjects {

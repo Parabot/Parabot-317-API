@@ -5,20 +5,22 @@ import java.awt.Graphics;
 import java.awt.Point;
 
 import org.rev317.accessors.Client;
+import org.rev317.api.interfaces.Interactable;
 import org.rev317.api.interfaces.Locatable;
 import org.rev317.api.methods.Calculations;
 import org.rev317.api.methods.Game;
+import org.rev317.api.methods.Menu;
 import org.rev317.api.wrappers.renderable.CharacterModel;
 import org.rev317.api.wrappers.renderable.Model;
 import org.rev317.api.wrappers.scene.Tile;
-import org.rev317.loader.Loader;
+import org.rev317.Loader;
 
 /**
  * 
- * @author Clisprail
+ * @author Everel
  *
  */
-public class Character implements Locatable {
+public class Character implements Locatable, Interactable {
 	private org.rev317.accessors.Character accessor = null;
 	
 	public Character(org.rev317.accessors.Character accessor) {
@@ -222,5 +224,15 @@ public class Character implements Locatable {
 		g.fillRect(p.x - 2, p.y - 2, 4, 4);
 		g.setColor(Color.white);
 		g.drawString(getName(), p.x + 5, p.y - 2);
+	}
+
+	/**
+	 * {@inheritDoc}
+	 */
+	public final boolean interact(String action) {
+		final Model model = getModel();
+		final Point a = (model == null) ? getCenterPointOnScreen() : model.getCentralPoint();
+		Menu.interact(action, a);
+		return Game.getCrosshairType() == Game.CROSSHAIR_TYPE_RED;
 	}
 }

@@ -6,11 +6,11 @@ import java.util.TreeMap;
 
 import org.rev317.accessors.Client;
 import org.rev317.api.wrappers.hud.Interface;
-import org.rev317.loader.Loader;
+import org.rev317.Loader;
 
 /**
  * 
- * @author Clisprail
+ * @author Everel
  * @author Dane
  * @author Matt
  *

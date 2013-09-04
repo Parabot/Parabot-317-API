@@ -25,7 +25,7 @@ import org.rev317.input.InputHandler;
 
 /**
  * 
- * @author Clisprail
+ * @author Everel
  *
  */
 public final class BotMenu {
@@ -62,7 +62,7 @@ public final class BotMenu {
 		paintDebugger.addDebugger("Npcs", new DNpcs());
 		
 		debug.add(newDebugItem("SceneObjects"));
-		paintDebugger.addDebugger("GameObjects", new DObjects());
+		paintDebugger.addDebugger("SceneObjects", new DObjects());
 		
 		debug.add(newDebugItem("GroundItems"));
 		paintDebugger.addDebugger("GroundItems", new DGroundItems());

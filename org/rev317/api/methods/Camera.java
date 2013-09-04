@@ -1,13 +1,13 @@
 package org.rev317.api.methods;
 
 import org.parabot.environment.input.Keyboard;
+import org.rev317.Loader;
 import org.rev317.api.interfaces.Locatable;
 import org.rev317.api.wrappers.scene.Tile;
-import org.rev317.loader.Loader;
 
 /**
  * 
- * @author Clisprail, Unknown
+ * @author Everel, Unknown
  * 
  */
 public final class Camera {

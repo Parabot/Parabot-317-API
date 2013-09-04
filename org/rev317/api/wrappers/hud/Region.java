@@ -1,5 +1,10 @@
 package org.rev317.api.wrappers.hud;
 
+/**
+ * 
+ * @author Everel
+ *
+ */
 public class Region {
 
 	public static final Region GAME = new Region(4, 4);

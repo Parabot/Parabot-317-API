@@ -1,10 +1,10 @@
 package org.rev317.api.wrappers.hud;
 
-import org.rev317.loader.Loader;
+import org.rev317.Loader;
 
 /**
  * 
- * @author Clisprail, Dane
+ * @author Everel, Dane
  * 
  * 
  * 

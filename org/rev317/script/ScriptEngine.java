@@ -13,6 +13,11 @@ import org.parabot.environment.scripts.Script;
 import org.rev317.api.events.MessageEvent;
 import org.rev317.api.events.listeners.MessageListener;
 
+/**
+ * 
+ * @author Everel
+ *
+ */
 public class ScriptEngine {
 	private static HashMap<Context, ScriptEngine> instances = new HashMap<Context, ScriptEngine>();
 	private ArrayList<MouseListener> mouseListeners = new ArrayList<MouseListener>();

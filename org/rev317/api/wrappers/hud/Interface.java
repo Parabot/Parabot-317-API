@@ -12,7 +12,7 @@ import org.rev317.api.methods.Menu;
 
 /**
  * 
- * @author Matt, Clisprail
+ * @author Matt, Everel
  * 
  */
 public class Interface {

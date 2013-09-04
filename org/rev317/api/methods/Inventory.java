@@ -4,14 +4,14 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 import org.parabot.environment.api.utils.Filter;
-import org.rev317.loader.Loader;
+import org.rev317.Loader;
 import org.rev317.accessors.Client;
 import org.rev317.api.wrappers.hud.Interface;
 import org.rev317.api.wrappers.hud.Item;
 
 /**
  * 
- * @author Clisprail
+ * @author Everel
  *
  */
 public final class Inventory {

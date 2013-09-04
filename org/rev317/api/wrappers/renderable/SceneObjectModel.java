@@ -4,6 +4,11 @@ import org.rev317.accessors.SceneObjectTile;
 import org.rev317.api.methods.Calculations;
 import org.rev317.api.wrappers.scene.SceneObject;
 
+/**
+ * 
+ * @author Everel
+ *
+ */
 public final class SceneObjectModel extends Model {
 	private SceneObjectTile sceneObjectTileAccessor = null;
 	

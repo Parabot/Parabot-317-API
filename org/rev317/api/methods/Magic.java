@@ -12,7 +12,7 @@ import org.rev317.api.wrappers.scene.SceneObject;
 
 /**
  * 
- * @author Uavix, Clisprail
+ * @author Uavix, Everel
  * 
  */
 public final class Magic

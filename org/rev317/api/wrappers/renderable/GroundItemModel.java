@@ -4,7 +4,7 @@ import org.rev317.api.interfaces.Locatable;
 
 /**
  * 
- * @author Clisprail
+ * @author Everel
  *
  */
 public final class GroundItemModel extends Model {

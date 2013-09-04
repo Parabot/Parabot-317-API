@@ -1,4 +1,4 @@
-package org.rev317.loader;
+package org.rev317;
 
 import java.applet.Applet;
 import java.net.MalformedURLException;
@@ -18,7 +18,14 @@ import org.rev317.core.Injector;
 import org.rev317.script.ScriptEngine;
 import org.rev317.utils.BotMenu;
 
-@ServerManifest(author = "Your Name", name = "The Server Name", type = Type.INJECTION, version = 0.1)
+/**
+ * 
+ * This is a loader for a an unobfuscated 317 server
+ * 
+ * @author Everel
+ *
+ */
+@ServerManifest(author = "Everel", name = "RecklessPk", type = Type.INJECTION, version = 0.2)
 public class Loader extends ServerProvider implements Opcodes {
 	private Applet applet = null;
 
@@ -27,10 +34,10 @@ public class Loader extends ServerProvider implements Opcodes {
 	 */
 	@Override
 	public Applet fetchApplet() {
-		// load the applet, use the ASMClassLoader too load our injected classes
+		// load the applet, use the ASMClassLoader to load our injected classes
 		try {
 			final Context context = Context.resolve();
-			context.getClassPath().dump("dumped.jar");
+			//context.getClassPath().dump("dumped.jar");
 			final ASMClassLoader classLoader = context.getASMClassLoader();
 			final Class<?> clientClass = classLoader.loadClass("client");
 			Object instance = clientClass.newInstance();
@@ -46,19 +53,18 @@ public class Loader extends ServerProvider implements Opcodes {
 	@Override
 	public void injectHooks() {
 		AddInterfaceAdapter.setAccessorPackage("org/rev317/accessors/");
-		// custom injections here
-		Injector.injectPaint();
-		Injector.addModelGetter();
-		Injector.hookMessageListener();
 		// default injection is done by bot, it basically parses the hooks file
 		super.injectHooks();
+		
+		// custom injections here
+		Injector.injectPaint();
 	}
 
 	@Override
 	public URL getJar() {
 		try {
 			// the location of the uninjected jar, if you store the jar on your pc use File.toURI().toURL();
-			return new URL("Client Url Here");
+			return new URL("http://bot.parabot.org/servers/RecklessPk.jar");
 		} catch (MalformedURLException e) {
 			throw new RuntimeException(e);
 		}
@@ -68,7 +74,7 @@ public class Loader extends ServerProvider implements Opcodes {
 	public URL getHooks() {
 		try {
 			// the location of the hooks file, if you store the jar on your pc use File.toURI().toURL();
-			return new URL("The XML URL Here");
+			return new URL("http://bot.parabot.org/hooks/201/317hooks.xml");
 		} catch (MalformedURLException e) {
 			throw new RuntimeException(e);
 		}
@@ -96,3 +102,4 @@ public class Loader extends ServerProvider implements Opcodes {
 	}
 
 }
+

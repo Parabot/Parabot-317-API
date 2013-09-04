@@ -7,17 +7,17 @@ import java.awt.Point;
 import org.parabot.core.Context;
 import org.parabot.core.paint.AbstractDebugger;
 import org.parabot.core.paint.PaintDebugger;
+import org.rev317.Loader;
 import org.rev317.accessors.Client;
 import org.rev317.api.methods.Calculations;
 import org.rev317.api.methods.Game;
 import org.rev317.api.methods.Players;
 import org.rev317.api.wrappers.interactive.Player;
 import org.rev317.api.wrappers.scene.Tile;
-import org.rev317.loader.Loader;
 
 /**
  * 
- * @author Clisprail, Matt
+ * @author Everel, Matt
  * 
  */
 public class DLocations extends AbstractDebugger {

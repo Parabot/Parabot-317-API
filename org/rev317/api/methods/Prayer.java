@@ -6,7 +6,7 @@ import org.rev317.api.wrappers.hud.Tab;
 
 /**
  * 
- * @author Uavix, Clisprail
+ * @author Uavix, Everel
  * 
  */
 public final class Prayer

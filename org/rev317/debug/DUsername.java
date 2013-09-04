@@ -4,8 +4,8 @@ import java.awt.Graphics;
 
 import org.parabot.core.paint.AbstractDebugger;
 import org.parabot.core.paint.PaintDebugger;
+import org.rev317.Loader;
 import org.rev317.accessors.Client;
-import org.rev317.loader.Loader;
 
 public class DUsername extends AbstractDebugger {
 	private boolean enabled = false;

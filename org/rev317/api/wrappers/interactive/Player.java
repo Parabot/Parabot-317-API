@@ -2,7 +2,7 @@ package org.rev317.api.wrappers.interactive;
 
 /**
  * 
- * @author Clisprail
+ * @author Everel
  *
  */
 public final class Player extends Character {

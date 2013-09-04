@@ -10,7 +10,7 @@ import org.rev317.api.methods.Menu;
 
 /**
  * 
- * @author Clisprail
+ * @author Everel
  *
  */
 public class DMenu extends AbstractDebugger {

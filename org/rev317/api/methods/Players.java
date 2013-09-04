@@ -8,13 +8,13 @@ import org.parabot.environment.api.utils.Filter;
 import org.rev317.accessors.Client;
 import org.rev317.api.wrappers.interactive.Player;
 
-import org.rev317.loader.Loader;
+import org.rev317.Loader;
 
 /**
  * 
  * A class which fetches all players near you
  * 
- * @author Clisprail
+ * @author Everel
  *
  */
 public final class Players {

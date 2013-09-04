@@ -5,24 +5,27 @@ import java.util.ArrayList;
 import org.parabot.environment.api.utils.Filter;
 import org.parabot.environment.api.utils.Time;
 import org.parabot.environment.input.Keyboard;
+import org.rev317.Loader;
 import org.rev317.api.wrappers.hud.Interface;
 import org.rev317.api.wrappers.hud.Item;
 import org.rev317.api.wrappers.interactive.Npc;
 import org.rev317.api.wrappers.scene.SceneObject;
-import org.rev317.loader.Loader;
-
-
 
 /**
  * 
- * @author Clisprail
+ * @author Everel
  * 
  */
-public class Bank
-{
+public class Bank {
 
-	public static final int[] BANKERS = new int[] { 44, 45, 494, 495, 498, 499, 909, 958, 1036, 2271, 2354, 2355, 3824, 5488, 5901, 4456, 4457, 4458, 4459, 5912, 5913, 6362, 6532, 6533, 6534, 6535, 7605, 8948, 9710, 14367 };
-	public static final int[] BANKS = new int[] { 782, 2213, 2995, 5276, 6084, 10517, 11402, 11758, 12759, 14367, 19230, 20325, 24914, 25808, 26972, 29085, 52589, 34752, 35647, 36786, 2012, 2015, 2019, 693, 4483, 12308, 20607, 21301, 27663, 42192 };
+	public static final int[] BANKERS = new int[] { 44, 45, 494, 495, 498, 499,
+			909, 958, 1036, 2271, 2354, 2355, 3824, 5488, 5901, 4456, 4457,
+			4458, 4459, 5912, 5913, 6362, 6532, 6533, 6534, 6535, 7605, 8948,
+			9710, 14367 };
+	public static final int[] BANKS = new int[] { 782, 2213, 2995, 5276, 6084,
+			10517, 11402, 11758, 12759, 14367, 19230, 20325, 24914, 25808,
+			26972, 29085, 52589, 34752, 35647, 36786, 2012, 2015, 2019, 693,
+			4483, 12308, 20607, 21301, 27663, 42192 };
 
 	/**
 	 * Gets nearest banker
@@ -30,8 +33,7 @@ public class Bank
 	 * @return nearest banker
 	 */
 	public static Npc getBanker() {
-		return Npcs.getNearest(new Filter<Npc>()
-		{
+		return Npcs.getNearest(new Filter<Npc>() {
 
 			@Override
 			public boolean accept(Npc f) {
@@ -54,14 +56,15 @@ public class Bank
 	public static SceneObject[] getNearestBanks() {
 		return SceneObjects.getNearest(BANKS);
 	}
-	
+
 	/**
 	 * Gets nearest bank booths
+	 * 
 	 * @return bank booth
 	 */
 	public static SceneObject getBank() {
 		SceneObject[] banks = getNearestBanks();
-		if(banks != null && banks[0] != null) {
+		if (banks != null && banks[0] != null) {
 			return banks[0];
 		}
 		return null;
@@ -166,7 +169,7 @@ public class Bank
 	 */
 	public static void close() {
 		// TODO
-		//Interfaces.openInterface(-1);
+		// Interfaces.openInterface(-1);
 	}
 
 	/**

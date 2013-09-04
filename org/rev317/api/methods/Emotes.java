@@ -8,7 +8,7 @@ import org.rev317.api.wrappers.hud.Tab;
 
 /**
  * 
- * @author Clisprail
+ * @author Everel
  *
  */
 public final class Emotes {

@@ -5,7 +5,7 @@ import java.awt.image.ImageObserver;
 
 /**
  * 
- * @author Clisprail
+ * @author Everel
  *
  */
 public abstract class ImageProducer implements ImageObserver {

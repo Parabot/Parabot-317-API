@@ -2,11 +2,11 @@ package org.rev317.api.methods;
 
 import org.rev317.accessors.Client;
 import org.rev317.api.wrappers.scene.Tile;
-import org.rev317.loader.Loader;
+import org.rev317.Loader;
 
 /**
  * 
- * @author Clisprail
+ * @author Everel
  *
  */
 public final class Walking {

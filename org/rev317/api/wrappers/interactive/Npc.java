@@ -4,18 +4,15 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Point;
 
-import org.rev317.api.interfaces.Interactable;
-import org.rev317.api.methods.Game;
-import org.rev317.api.methods.Menu;
 import org.rev317.api.wrappers.defs.NpcDef;
 import org.rev317.api.wrappers.renderable.Model;
 
 /**
  * 
- * @author Clisprail
+ * @author Everel
  *
  */
-public final class Npc extends Character implements Interactable {
+public final class Npc extends Character {
 	private org.rev317.accessors.Npc accessor = null;
 
 	public Npc(org.rev317.accessors.Npc accessor) {
@@ -65,16 +62,6 @@ public final class Npc extends Character implements Interactable {
 		final StringBuilder builder = new StringBuilder();
 		builder.append(def.getName()).append(" [").append(def.getId()).append("]");
 		g.drawString(builder.toString(), p.x + 5, p.y - 2);
-	}
-
-	/**
-	 * {@inheritDoc}
-	 */
-	public final boolean interact(String action) {
-		final Model model = getModel();
-		final Point a = (model == null) ? getCenterPointOnScreen() : model.getCentralPoint();
-		Menu.interact(action, a);
-		return Game.getCrosshairType() == Game.CROSSHAIR_TYPE_RED;
 	}
 
 }

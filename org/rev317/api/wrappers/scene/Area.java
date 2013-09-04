@@ -11,8 +11,7 @@ import org.rev317.api.methods.Calculations;
  * @author Matt
  * 
  */
-public class Area
-{
+public class Area {
 
 	private Polygon p = new Polygon();
 
@@ -22,8 +21,7 @@ public class Area
 	 * @param tiles
 	 *            tiles to use in the area
 	 */
-	public Area(Tile... tiles)
-	{
+	public Area(Tile... tiles) {
 		for (int i = 0; i < tiles.length; i++) {
 			p.addPoint(tiles[i].getX(), tiles[i].getY());
 		}
@@ -104,7 +102,9 @@ public class Area
 		int j;
 		boolean result = false;
 		for (i = 0, j = p.npoints - 1; i < p.npoints; j = i++) {
-			if ((p.ypoints[i] > y - 1) != (p.ypoints[j] > y - 1) && (x <= (p.xpoints[j] - p.xpoints[i]) * (y - p.ypoints[i]) / (p.ypoints[j] - p.ypoints[i]) + p.xpoints[i])) {
+			if ((p.ypoints[i] > y - 1) != (p.ypoints[j] > y - 1)
+					&& (x <= (p.xpoints[j] - p.xpoints[i]) * (y - p.ypoints[i])
+							/ (p.ypoints[j] - p.ypoints[i]) + p.xpoints[i])) {
 				result = !result;
 			}
 		}
@@ -127,4 +127,3 @@ public class Area
 	}
 
 }
-

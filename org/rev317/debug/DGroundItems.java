@@ -10,7 +10,7 @@ import org.rev317.api.wrappers.renderable.Model;
 import org.rev317.api.wrappers.scene.GroundItem;
 /**
  * 
- * @author Clisprail
+ * @author Everel
  *
  */
 public class DGroundItems extends AbstractDebugger {

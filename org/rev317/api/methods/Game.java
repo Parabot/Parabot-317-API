@@ -3,11 +3,11 @@ package org.rev317.api.methods;
 import java.awt.Point;
 
 import org.rev317.accessors.CollisionMap;
-import org.rev317.loader.Loader;
+import org.rev317.Loader;
 
 /**
  * 
- * @author Clisprail
+ * @author Everel
  *
  */
 public final class Game {

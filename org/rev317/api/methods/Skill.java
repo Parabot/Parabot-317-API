@@ -1,6 +1,6 @@
 package org.rev317.api.methods;
 
-import org.rev317.loader.Loader;
+import org.rev317.Loader;
 
 /**
  * 

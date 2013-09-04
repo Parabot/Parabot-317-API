@@ -12,7 +12,7 @@ import org.rev317.api.wrappers.scene.Tile;
 
 /**
  * 
- * @author Clisprail
+ * @author Everel
  * For bot developing testing only...
  */
 public class DMinimap extends AbstractDebugger {

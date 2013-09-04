@@ -7,12 +7,12 @@ import java.util.Comparator;
 import org.parabot.environment.api.utils.Filter;
 import org.rev317.accessors.Client;
 import org.rev317.api.wrappers.interactive.Npc;
-import org.rev317.loader.Loader;
+import org.rev317.Loader;
 
 
 /**
  * 
- * @author Clisprail
+ * @author Everel
  *
  */
 public final class Npcs {

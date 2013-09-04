@@ -11,6 +11,11 @@ import org.rev317.input.InputHandler;
 import org.rev317.painter.Painter;
 import org.rev317.script.ScriptEngine;
 
+/**
+ * 
+ * @author Everel, Matt
+ *
+ */
 public abstract class GameApplet extends Applet {
 	private static final long serialVersionUID = 1L;
 	private ScriptEngine scriptEngine = ScriptEngine.getInstance();
