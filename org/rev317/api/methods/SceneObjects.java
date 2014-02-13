@@ -1,17 +1,17 @@
 package org.rev317.api.methods;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.Comparator;
-
 import org.parabot.environment.api.utils.Filter;
+import org.rev317.Loader;
 import org.rev317.accessors.Client;
 import org.rev317.accessors.Scene;
 import org.rev317.accessors.SceneObjectTile;
 import org.rev317.accessors.SceneTile;
 import org.rev317.api.wrappers.scene.SceneObject;
-import org.rev317.Loader;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.Comparator;
 /**
  * 
  * @author Everel
@@ -110,6 +110,22 @@ public final class SceneObjects {
 			
 		});
 	}
+
+    public static final SceneObject getClosest(final int... ids) {
+        return getNearest(new Filter<SceneObject>() {
+
+            @Override
+            public boolean accept(SceneObject object) {
+                for(final int id : ids) {
+                    if(id == object.getId()) {
+                        return true;
+                    }
+                }
+                return false;
+            }
+
+        })[0];
+    }
 	
 	private static SceneObject getSceneObjectAtTile(int x, int y, boolean useCached) {
 		if(!useCached) {
