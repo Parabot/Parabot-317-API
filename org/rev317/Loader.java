@@ -1,10 +1,5 @@
 package org.rev317;
 
-import java.applet.Applet;
-import java.net.MalformedURLException;
-import java.net.URL;
-
-import javax.swing.JMenuBar;
 import org.objectweb.asm.Opcodes;
 import org.parabot.core.Context;
 import org.parabot.core.asm.ASMClassLoader;
@@ -18,6 +13,11 @@ import org.rev317.core.Injector;
 import org.rev317.script.ScriptEngine;
 import org.rev317.utils.BotMenu;
 
+import javax.swing.*;
+import java.applet.Applet;
+import java.net.MalformedURLException;
+import java.net.URL;
+
 /**
  * 
  * This is a loader for a an unobfuscated 317 server
@@ -25,7 +25,7 @@ import org.rev317.utils.BotMenu;
  * @author Everel
  *
  */
-@ServerManifest(author = "Everel", name = "RecklessPk", type = Type.INJECTION, version = 0.2)
+@ServerManifest(author = "Everel & Paradox", name = "Server Name Here", type = Type.INJECTION, version = 0.3)
 public class Loader extends ServerProvider implements Opcodes {
 	private Applet applet = null;
 
@@ -64,7 +64,7 @@ public class Loader extends ServerProvider implements Opcodes {
 	public URL getJar() {
 		try {
 			// the location of the uninjected jar, if you store the jar on your pc use File.toURI().toURL();
-			return new URL("http://bot.parabot.org/servers/RecklessPk.jar");
+			return new URL("Url To Server Client Jar Here");
 		} catch (MalformedURLException e) {
 			throw new RuntimeException(e);
 		}
@@ -74,7 +74,7 @@ public class Loader extends ServerProvider implements Opcodes {
 	public URL getHooks() {
 		try {
 			// the location of the hooks file, if you store the jar on your pc use File.toURI().toURL();
-			return new URL("http://bot.parabot.org/hooks/201/317hooks.xml");
+			return new URL("Url To Server Client Hooks Here");
 		} catch (MalformedURLException e) {
 			throw new RuntimeException(e);
 		}
