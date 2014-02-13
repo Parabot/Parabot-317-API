@@ -1,7 +1,5 @@
 package org.rev317.api.methods;
 
-import java.util.ArrayList;
-
 import org.parabot.environment.api.utils.Filter;
 import org.parabot.environment.api.utils.Time;
 import org.parabot.environment.input.Keyboard;
@@ -10,6 +8,8 @@ import org.rev317.api.wrappers.hud.Interface;
 import org.rev317.api.wrappers.hud.Item;
 import org.rev317.api.wrappers.interactive.Npc;
 import org.rev317.api.wrappers.scene.SceneObject;
+
+import java.util.ArrayList;
 
 /**
  * 
@@ -107,7 +107,10 @@ public class Bank {
 			b.interact("Withdraw 10");
 		} else if (amount < 28) {
 			b.interact("Withdraw x");
-			Time.sleep(1200);
+			while (Interfaces.getChatboxInterface() != null
+                    && Interfaces.getChatboxInterfaceId() != 1){
+                Time.sleep(500);
+            }
 			Keyboard.getInstance().sendKeys("" + amount);
 		} else {
 			b.interact("Withdraw All");

@@ -1,27 +1,13 @@
 package org.rev317.utils;
 
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-
-import javax.swing.JCheckBoxMenuItem;
-import javax.swing.JMenu;
-import javax.swing.JMenuBar;
-import javax.swing.JMenuItem;
 import org.parabot.core.Context;
 import org.parabot.core.paint.PaintDebugger;
-import org.rev317.debug.DAnimation;
-import org.rev317.debug.DBank;
-import org.rev317.debug.DGroundItems;
-import org.rev317.debug.DInventory;
-import org.rev317.debug.DLocations;
-import org.rev317.debug.DMenu;
-import org.rev317.debug.DMouse;
-import org.rev317.debug.DNpcs;
-import org.rev317.debug.DObjects;
-import org.rev317.debug.DPlayers;
-import org.rev317.debug.DTab;
-import org.rev317.debug.DUsername;
+import org.rev317.debug.*;
 import org.rev317.input.InputHandler;
+
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 /**
  * 
@@ -87,6 +73,9 @@ public final class BotMenu {
 		
 		debug.add(newDebugItem("Animation"));
 		paintDebugger.addDebugger("Animation", new DAnimation());
+
+        debug.add(newDebugItem("Interfaces"));
+        paintDebugger.addDebugger("Interfaces", new DInterfaces());
 		
 		
 		JMenu input = new JMenu("Input");
