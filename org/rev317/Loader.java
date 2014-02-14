@@ -12,6 +12,7 @@ import org.rev317.accessors.Client;
 import org.rev317.core.Injector;
 import org.rev317.script.ScriptEngine;
 import org.rev317.utils.BotMenu;
+import org.rev317.utils.Reader;
 
 import javax.swing.*;
 import java.applet.Applet;
@@ -25,7 +26,7 @@ import java.net.URL;
  * @author Everel
  *
  */
-@ServerManifest(author = "Everel & Paradox", name = "Server Name Here", type = Type.INJECTION, version = 0.3)
+@ServerManifest(author = "Everel & Paradox", name = "Server Name Here", type = Type.INJECTION, version = 0.4)
 public class Loader extends ServerProvider implements Opcodes {
 	private Applet applet = null;
 
@@ -39,7 +40,7 @@ public class Loader extends ServerProvider implements Opcodes {
 			final Context context = Context.resolve();
 			//context.getClassPath().dump("dumped.jar");
 			final ASMClassLoader classLoader = context.getASMClassLoader();
-			final Class<?> clientClass = classLoader.loadClass("client");
+			final Class<?> clientClass = classLoader.loadClass(Reader.readProvider("clientClass"));
 			Object instance = clientClass.newInstance();
 			applet = (Applet) instance;
 			applet.init();
@@ -64,7 +65,7 @@ public class Loader extends ServerProvider implements Opcodes {
 	public URL getJar() {
 		try {
 			// the location of the uninjected jar, if you store the jar on your pc use File.toURI().toURL();
-			return new URL("Url To Server Client Jar Here");
+			return new URL(Reader.readProvider("client"));
 		} catch (MalformedURLException e) {
 			throw new RuntimeException(e);
 		}
@@ -74,7 +75,7 @@ public class Loader extends ServerProvider implements Opcodes {
 	public URL getHooks() {
 		try {
 			// the location of the hooks file, if you store the jar on your pc use File.toURI().toURL();
-			return new URL("Url To Server Client Hooks Here");
+			return new URL(Reader.readProvider("hooks"));
 		} catch (MalformedURLException e) {
 			throw new RuntimeException(e);
 		}
