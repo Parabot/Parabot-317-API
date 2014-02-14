@@ -41,6 +41,8 @@ public class Loader extends ServerProvider implements Opcodes {
 			//context.getClassPath().dump("dumped.jar");
 			final ASMClassLoader classLoader = context.getASMClassLoader();
 			final Class<?> clientClass = classLoader.loadClass(Reader.readProvider("clientClass"));
+            //Used to be:
+            //final Class<?> clientClass = classLoader.loadClass("client");
 			Object instance = clientClass.newInstance();
 			applet = (Applet) instance;
 			applet.init();
@@ -66,6 +68,8 @@ public class Loader extends ServerProvider implements Opcodes {
 		try {
 			// the location of the uninjected jar, if you store the jar on your pc use File.toURI().toURL();
 			return new URL(Reader.readProvider("client"));
+            //Used to be:
+            //return new URL("http://url.to/jar.here");
 		} catch (MalformedURLException e) {
 			throw new RuntimeException(e);
 		}
@@ -76,6 +80,8 @@ public class Loader extends ServerProvider implements Opcodes {
 		try {
 			// the location of the hooks file, if you store the jar on your pc use File.toURI().toURL();
 			return new URL(Reader.readProvider("hooks"));
+            //Used to be:
+            //return new URL("http://url.to/hooks.here");
 		} catch (MalformedURLException e) {
 			throw new RuntimeException(e);
 		}
