@@ -9,6 +9,7 @@ import org.parabot.core.parsers.HookParser;
 import org.rev317.Loader;
 import org.rev317.accessors.Client;
 import org.rev317.api.wrappers.scene.Tile;
+import org.rev317.utils.Reader;
 
 
 /**
@@ -225,7 +226,12 @@ public final class Calculations {
 
 	private static final Point worldToMinimap(int x, int y, boolean in) {
 		final Client client = Loader.getClient();
-		int i = client.getMinimapInt1() + client.getMinimapInt2() & 0x7FF;
+        int i = 0;
+        if (Reader.readProvider("serverName").toLowerCase() == "pkhonor"){
+            i = client.getMinimapInt1();
+        }else{
+            i = client.getMinimapInt1() + client.getMinimapInt2() & 0x7FF;
+        }
 		if (in) {
 			int j = x * x + y * y;
 			if (j > 6400) {
