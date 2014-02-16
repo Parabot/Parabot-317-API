@@ -227,7 +227,7 @@ public final class Calculations {
 	private static final Point worldToMinimap(int x, int y, boolean in) {
 		final Client client = Loader.getClient();
         int i = 0;
-        if (Reader.readProvider("worldToMinimap") == "pkhonor"){
+        if (Reader.readProvider("serverName").toLowerCase() == "pkhonor"){
             i = client.getMinimapInt1();
         }else{
             i = client.getMinimapInt1() + client.getMinimapInt2() & 0x7FF;
