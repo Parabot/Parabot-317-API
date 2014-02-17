@@ -3,6 +3,7 @@ package org.rev317.api.methods;
 import org.parabot.environment.api.utils.Filter;
 import org.parabot.environment.api.utils.Time;
 import org.parabot.environment.input.Keyboard;
+import org.parabot.environment.input.Mouse;
 import org.rev317.Loader;
 import org.rev317.api.wrappers.hud.Interface;
 import org.rev317.api.wrappers.hud.Item;
@@ -12,9 +13,9 @@ import org.rev317.api.wrappers.scene.SceneObject;
 import java.util.ArrayList;
 
 /**
- * 
+ *
  * @author Everel
- * 
+ *
  */
 public class Bank {
 
@@ -29,7 +30,7 @@ public class Bank {
 
 	/**
 	 * Gets nearest banker
-	 * 
+	 *
 	 * @return nearest banker
 	 */
 	public static Npc getBanker() {
@@ -50,7 +51,7 @@ public class Bank {
 
 	/**
 	 * Gets nearest bank booths
-	 * 
+	 *
 	 * @return bank booths
 	 */
 	public static SceneObject[] getNearestBanks() {
@@ -59,7 +60,7 @@ public class Bank {
 
 	/**
 	 * Gets nearest bank booths
-	 * 
+	 *
 	 * @return bank booth
 	 */
 	public static SceneObject getBank() {
@@ -72,7 +73,7 @@ public class Bank {
 
 	/**
 	 * Opens bank using banker or bank booth
-	 * 
+	 *
 	 * @return <b>true</b> if successfully interacted
 	 */
 	public static boolean open() {
@@ -93,33 +94,38 @@ public class Bank {
 
 	/**
 	 * Withdraws items at bank based on given parameters
-	 * 
+	 *
 	 * @param id
 	 * @param amount
 	 */
-	public static void withdraw(int id, int amount) {
-		Item b = getItem(id);
-		if (amount == 1) {
-			b.interact("Withdraw 1");
-		} else if (amount == 5) {
-			b.interact("Withdraw 5");
-		} else if (amount == 10) {
-			b.interact("Withdraw 10");
-		} else if (amount < 28) {
-			b.interact("Withdraw x");
-			while (Interfaces.getChatboxInterface() != null
-                    && Interfaces.getChatboxInterfaceId() != 1){
-                Time.sleep(500);
-            }
-			Keyboard.getInstance().sendKeys("" + amount);
-		} else {
-			b.interact("Withdraw All");
-		}
-	}
+    public static void withdraw(int id, int amount) {
+        System.out.println("Withdrawing");
+        if (!isOpen()) {
+            return;
+        }
+        Item b = getItem(id);
+        if(b == null) {
+            return;
+        }
+        System.out.println("Withdrawing");
+        if (amount == 1) {
+            Mouse.getInstance().click(b.getScreenLocation());
+        } else if (amount == 5) {
+            b.interact("Withdraw 5");
+        } else if (amount == 10) {
+            b.interact("Withdraw 10");
+        } else if (amount == 0) {
+            b.interact("Withdraw All");
+        } else {
+            b.interact("Withdraw X");
+            Time.sleep(1200);
+            Keyboard.getInstance().sendKeys("" + amount);
+        }
+    }
 
 	/**
 	 * Gets bank item with given id
-	 * 
+	 *
 	 * @param id
 	 * @return bank item
 	 */
@@ -134,7 +140,7 @@ public class Bank {
 
 	/**
 	 * Counts the amount of items with given id in bank
-	 * 
+	 *
 	 * @param id
 	 * @return count
 	 */
@@ -144,7 +150,7 @@ public class Bank {
 
 	/**
 	 * Opens the bank
-	 * 
+	 *
 	 * @param bank
 	 *            booth
 	 */
@@ -177,7 +183,7 @@ public class Bank {
 
 	/**
 	 * Deposits all items except the given ids
-	 * 
+	 *
 	 * @param exceptions
 	 *            the item indexes that will be ignored.
 	 */
@@ -201,7 +207,7 @@ public class Bank {
 
 	/**
 	 * Gets all bank item ids in bank
-	 * 
+	 *
 	 * @return bank items
 	 */
 	public static int[] getBankItemIDs() {
@@ -211,7 +217,7 @@ public class Bank {
 
 	/**
 	 * Gets all stack sizes in bank
-	 * 
+	 *
 	 * @return stack sizes
 	 */
 	public static int[] getBankStacks() {
@@ -221,7 +227,7 @@ public class Bank {
 
 	/**
 	 * Gets all bank items in bank
-	 * 
+	 *
 	 * @return bank items
 	 */
 	public static Item[] getBankItems() {
@@ -238,7 +244,7 @@ public class Bank {
 
 	/**
 	 * Counts total amount of items in bank
-	 * 
+	 *
 	 * @return total amount of items
 	 */
 	public static int getBankCount() {
@@ -247,7 +253,7 @@ public class Bank {
 
 	/**
 	 * Determines if bank is open
-	 * 
+	 *
 	 * @return <b>true</b> if bank is open
 	 */
 	public static boolean isOpen() {
