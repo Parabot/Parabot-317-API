@@ -132,6 +132,34 @@ public class Bank {
         }
     }
 
+    //TODO might release this function
+    public static void withdraw(int id, int amount) {
+
+        if (!isOpen()) {
+            return;
+        }
+
+        Item b = getItem(id);
+
+        if(b == null) {
+            return;
+        }
+
+        if (amount == 1) {
+            Mouse.getInstance().click(b.getScreenLocation());
+        } else if (amount == 5) {
+            b.interact("Withdraw 5");
+        } else if (amount == 10) {
+            b.interact("Withdraw 10");
+        } else if (amount == 0) {
+            b.interact("Withdraw All");
+        } else {
+            b.interact("Withdraw x");
+            Time.sleep(1500);
+            Keyboard.getInstance().sendKeys("" + amount);
+        }
+    }
+
     /**
      * Gets bank item with given id
      *
