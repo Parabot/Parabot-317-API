@@ -9,7 +9,6 @@ import org.parabot.environment.servers.ServerManifest;
 import org.parabot.environment.servers.ServerProvider;
 import org.parabot.environment.servers.Type;
 import org.rev317.accessors.Client;
-import org.rev317.api.methods.SceneObjects;
 import org.rev317.core.Injector;
 import org.rev317.script.ScriptEngine;
 import org.rev317.utils.BotMenu;
@@ -70,7 +69,7 @@ public class Loader extends ServerProvider implements Opcodes {
 			// the location of the uninjected jar, if you store the jar on your pc use File.toURI().toURL();
 			return new URL(Reader.readProvider("client"));
             //Used to be:
-            //return new URL("http://url.to/jar.here");
+            //return new URL("http://bot.parabot.org/servers/Crisisx-play.jar");
 		} catch (MalformedURLException e) {
 			throw new RuntimeException(e);
 		}
@@ -82,7 +81,7 @@ public class Loader extends ServerProvider implements Opcodes {
 			// the location of the hooks file, if you store the jar on your pc use File.toURI().toURL();
 			return new URL(Reader.readProvider("hooks"));
             //Used to be:
-            //return new URL("http://url.to/hooks.here");
+            //return new URL("http://bot.parabot.org/hooks/201/317hooks-crisisx.xml");
 		} catch (MalformedURLException e) {
 			throw new RuntimeException(e);
 		}

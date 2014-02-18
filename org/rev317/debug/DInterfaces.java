@@ -11,38 +11,45 @@ public class DInterfaces extends AbstractDebugger {
 
     @Override
     public void paint(Graphics g) {
-        if (Interfaces.getOpenInterface() == null){
+        if (Interfaces.getOpenInterface() == null) {
             PaintDebugger.getInstance().addLine("Open interface ID: -1");
-        }else{
+        } else {
             PaintDebugger.getInstance().addLine("Open interface ID: " + Interfaces.getOpenInterfaceId());
-            if (Interfaces.getOpenInterface().getChildren() != null){
+            Interfaces.getOpenInterface().draw(g);
+            if (Interfaces.getOpenInterface().getChildren() != null) {
                 String children = "";
                 int amount = 0;
-                for (int i : Interfaces.getOpenInterface().getChildrenIds()){
-                    if (amount == 0){
-                        children += String.valueOf(i);
-                        amount++;
-                    }else {
-                        children += ", " + String.valueOf(i);
+                for (int i : Interfaces.getOpenInterface().getChildrenIds()) {
+                    if (Interfaces.get(i) != null) {
+                        Interfaces.get(i).draw(g);
+                        if (amount == 0) {
+                            children += String.valueOf(i);
+                            amount++;
+                        } else {
+                            children += ", " + String.valueOf(i);
+                        }
                     }
                 }
                 PaintDebugger.getInstance().addLine("Open interface got children ID's: " + children);
             }
         }
 
-        if (Interfaces.getChatboxInterface() == null){
+        if (Interfaces.getChatboxInterface() == null) {
             PaintDebugger.getInstance().addLine("Open chatbox interface ID: -1");
-        }else{
+        } else {
             PaintDebugger.getInstance().addLine("Open chatbox interface ID: " + Interfaces.getChatboxInterfaceId());
-            if (Interfaces.getChatboxInterface().getChildren() != null){
+            if (Interfaces.getChatboxInterface().getChildren() != null) {
                 String children = "";
                 int amount = 0;
-                for (int i : Interfaces.getChatboxInterface().getChildrenIds()){
-                    if (amount == 0){
-                        children += String.valueOf(i);
-                        amount++;
-                    }else {
-                        children += ", " + String.valueOf(i);
+                for (int i : Interfaces.getChatboxInterface().getChildrenIds()) {
+                    if (Interfaces.get(i) != null) {
+                        Interfaces.get(i).draw(g);
+                        if (amount == 0) {
+                            children += String.valueOf(i);
+                            amount++;
+                        } else {
+                            children += ", " + String.valueOf(i);
+                        }
                     }
                 }
                 PaintDebugger.getInstance().addLine("Open chatbox interface got children ID's: " + children);
