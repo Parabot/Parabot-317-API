@@ -8,7 +8,7 @@ import java.io.IOException;
 /**
  * This reader reads the information about the server provider from a file
  *
- * @author Paradox
+ * @author Paradox, Everel
  */
 public class Reader {
     public static String readProvider(String s) {
@@ -18,9 +18,11 @@ public class Reader {
             br = new BufferedReader(new FileReader(System.getProperty("user.home") + "/serverProvider.pb"));
             while ((sCurrentLine = br.readLine()) != null) {
                 if (sCurrentLine.startsWith(s)) {
+                	br.close();
                     return sCurrentLine.replace(s + ": ", "");
                 }
             }
+            br.close();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
