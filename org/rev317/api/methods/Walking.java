@@ -60,4 +60,13 @@ public final class Walking {
 		return !isMoving() || !isDestinationSet() || getDestination().distanceTo() < 5;
 	}
 
+
+    /**
+     * Determines if user has running activated
+     * @return <b>true</b> if user has running activated
+     */
+    public static final boolean isRunActivated() {
+        return Settings.getInstance().getSetting(173) == 0;
+    }
+
 }
