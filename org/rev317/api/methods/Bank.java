@@ -132,7 +132,7 @@ public class Bank {
         }
     }
 
-    //TODO might release this function
+    @Deprecated
     public static void withdraw(int id, int amount) {
 
         if (!isOpen()) {
