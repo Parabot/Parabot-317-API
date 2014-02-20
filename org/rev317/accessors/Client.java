@@ -6,6 +6,8 @@ public interface Client extends RSApplet {
 
 	public Player getLocalPlayer();
 
+	public int getLocalPlayerIndex();
+	
 	public boolean isLoggedIn();
 
 	public int getCameraX();
