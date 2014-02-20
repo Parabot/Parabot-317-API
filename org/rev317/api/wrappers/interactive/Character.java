@@ -101,11 +101,19 @@ public class Character implements Locatable, Interactable {
 	}
 	
 	/**
-	 * Returns the id of the character which is interacted by this character
-	 * @return id
+	 * Returns the character this character is interacting with
+	 * @return interacting character
 	 */
-	public final int getInteractingCharacter() {
-		return this.accessor.getInteractingId();
+	public final Character getInteractingCharacter() {
+		int index = this.accessor.getInteractingId();
+		if (index != -1 && index < 32768) {
+			return new Npc(Loader.getClient().getNpcs()[index]);
+		} else if (index >= 32768) {
+			index -= 32768;
+			//TODO: check if it's the local player's index here, I don't have the hook required to do it atm
+			return new Player(Loader.getClient().getPlayers()[index]);
+		}
+		return null;
 	}
 	
 	/**
