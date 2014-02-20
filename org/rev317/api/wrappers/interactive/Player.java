@@ -22,5 +22,9 @@ public final class Player extends Character {
 		return this.accessor.getName();
 	}
 
+    public final int[] getEquipment() {
+        return this.accessor.getEquipment();
+    }
+
 }
 

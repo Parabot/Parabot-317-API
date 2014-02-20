@@ -1,9 +1,11 @@
 package org.rev317.utils;
 
+import javafx.embed.swing.JFXPanel;
 import org.parabot.core.Context;
 import org.parabot.core.paint.PaintDebugger;
 import org.rev317.debug.*;
 import org.rev317.input.InputHandler;
+import org.rev317.randoms.ui.RandomUI;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -107,9 +109,33 @@ public final class BotMenu {
 		
 		/*debug.add(newDebugItem("Minimap"));
 		paintDebugger.addDebugger("Minimap", new DMinimap());*/
-		
-		bar.add(debug);
-		bar.add(input);
+
+        JMenu other = new JMenu("Other");
+        final JMenuItem randoms = new JMenuItem("Randoms");
+        randoms.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                SwingUtilities.invokeLater(new Runnable() {
+                    @Override
+                    public void run() {
+                        JFrame frame = new JFrame();
+                        JFXPanel jfxp = new JFXPanel();
+                        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                        frame.getContentPane().add(jfxp);
+                        frame.setSize(600, 400);
+                        frame.setLocationRelativeTo(null);
+                        frame.setVisible(false);
+
+                        RandomUI.main();
+                    }
+                });
+            }
+        });
+        other.add(randoms);
+
+        bar.add(debug);
+        bar.add(input);
+        bar.add(other);
 	}
 	
 	public final JMenuItem newDebugItem(final String name) {

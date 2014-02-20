@@ -7,6 +7,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ToggleButton;
 import javafx.scene.layout.Pane;
+import org.rev317.api.methods.Game;
 
 import java.net.URL;
 import java.util.ArrayList;
@@ -33,8 +34,10 @@ public class Controller implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         if (randoms.isEmpty()){
-            for (String s : new String[]{"Bob's island", "Mysterious old man", "Sandwich lady", "Auto login"}){
-                randoms.put(s, false);
+            for (String s : new String[]{"PKHonor - Bob's island", "PKHonor - Mysterious old man", "PKHonor - Sandwich lady", "PKHonor - Auto login"}){
+                if (s.split(" - ")[0].toLowerCase().equals(Game.getServerName().toLowerCase())){
+                    randoms.put(s, false);
+                }
             }
         }
 
