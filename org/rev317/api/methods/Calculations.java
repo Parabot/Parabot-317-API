@@ -227,11 +227,13 @@ public final class Calculations {
 	private static final Point worldToMinimap(int x, int y, boolean in) {
 		final Client client = Loader.getClient();
         int i;
-        if (Reader.readProvider("serverName").toLowerCase() == "pkhonor"){
-            i = client.getMinimapInt1();
-          }else{
+
+        try{
             i = client.getMinimapInt1() + client.getMinimapInt2() & 0x7FF;
+        }catch (AbstractMethodError e){
+            i = client.getMinimapInt1();
         }
+
 		if (in) {
 			int j = x * x + y * y;
 			if (j > 6400) {
