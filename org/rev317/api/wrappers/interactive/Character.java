@@ -110,7 +110,9 @@ public class Character implements Locatable, Interactable {
 			return new Npc(Loader.getClient().getNpcs()[index]);
 		} else if (index >= 32768) {
 			index -= 32768;
-			//TODO: check if it's the local player's index here, I don't have the hook required to do it atm
+			if (index == Loader.getClient().getLocalPlayerIndex()) {
+				return Players.getLocal();
+			}
 			return new Player(Loader.getClient().getPlayers()[index]);
 		}
 		return null;
