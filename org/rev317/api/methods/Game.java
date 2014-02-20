@@ -1,9 +1,10 @@
 package org.rev317.api.methods;
 
-import java.awt.Point;
-
-import org.rev317.accessors.CollisionMap;
 import org.rev317.Loader;
+import org.rev317.accessors.CollisionMap;
+import org.rev317.utils.Reader;
+
+import java.awt.*;
 
 /**
  * 
@@ -90,4 +91,11 @@ public final class Game {
 		return Loader.getClient().getLoopCycle();
 	}
 
+    /**
+     * Gets server name based on the serverProvider.pb file
+     * @return server name
+     */
+    public static final String getServerName(){
+        return Reader.readProvider("serverName");
+    }
 }
