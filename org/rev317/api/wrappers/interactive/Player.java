@@ -6,7 +6,7 @@ package org.rev317.api.wrappers.interactive;
  *
  */
 public final class Player extends Character {
-	private org.rev317.accessors.Player accessor = null;
+	private org.rev317.accessors.Player accessor;
 	
 	public Player(org.rev317.accessors.Player accessor) {
 		super(accessor);

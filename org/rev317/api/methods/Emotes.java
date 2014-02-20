@@ -8,6 +8,8 @@ import org.rev317.api.wrappers.hud.Tab;
 
 /**
  * 
+ * Performs Emotes
+ * 
  * @author Everel
  *
  */

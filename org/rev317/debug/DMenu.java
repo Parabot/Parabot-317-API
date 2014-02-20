@@ -14,7 +14,7 @@ import org.rev317.api.methods.Menu;
  *
  */
 public class DMenu extends AbstractDebugger {
-	private boolean enabled = false;
+	private boolean enabled;
 
 	@Override
 	public void paint(Graphics g) {

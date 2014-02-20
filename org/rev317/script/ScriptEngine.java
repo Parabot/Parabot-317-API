@@ -20,13 +20,16 @@ import org.rev317.api.events.listeners.MessageListener;
  */
 public class ScriptEngine {
 	private static HashMap<Context, ScriptEngine> instances = new HashMap<Context, ScriptEngine>();
-	private ArrayList<MouseListener> mouseListeners = new ArrayList<MouseListener>();
-	private ArrayList<MouseMotionListener> mouseMotionListeners = new ArrayList<MouseMotionListener>();
-	private ArrayList<MessageListener> messageListeners = new ArrayList<MessageListener>();
+	private ArrayList<MouseListener> mouseListeners;
+	private ArrayList<MouseMotionListener> mouseMotionListeners;
+	private ArrayList<MessageListener> messageListeners;
 	
 	private Script script = null;
 	
 	private ScriptEngine() {
+		this.mouseListeners = new ArrayList<MouseListener>();
+		this.mouseMotionListeners = new ArrayList<MouseMotionListener>();
+		this.messageListeners = new ArrayList<MessageListener>();
 		instances.put(Context.resolve(), this);
 	}
 	

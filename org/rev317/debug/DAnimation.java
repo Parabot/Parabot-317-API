@@ -7,8 +7,13 @@ import org.parabot.core.paint.AbstractDebugger;
 import org.rev317.api.methods.Game;
 import org.rev317.api.methods.Players;
 
+/**
+ * 
+ * @author Everel
+ *
+ */
 public class DAnimation extends AbstractDebugger {
-	private boolean enabled = false;
+	private boolean enabled;
 
 	@Override
 	public void paint(Graphics g) {

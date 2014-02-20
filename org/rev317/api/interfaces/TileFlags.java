@@ -2,8 +2,11 @@ package org.rev317.api.interfaces;
 
 /**
  * 
- * @author Matt
  * Holds all TileFlags
+ * 
+ * @author Matt
+ * 
+ * 
  */
 public interface TileFlags {
 	

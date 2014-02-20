@@ -12,8 +12,7 @@ import org.rev317.api.methods.Calculations;
  * 
  */
 public class Area {
-
-	private Polygon p = new Polygon();
+	private Polygon p;
 
 	/**
 	 * Initializes a PolygonArea with the tiles given
@@ -22,6 +21,7 @@ public class Area {
 	 *            tiles to use in the area
 	 */
 	public Area(Tile... tiles) {
+		this.p = new Polygon();
 		for (int i = 0; i < tiles.length; i++) {
 			p.addPoint(tiles[i].getX(), tiles[i].getY());
 		}

@@ -6,8 +6,13 @@ import org.parabot.core.paint.AbstractDebugger;
 import org.rev317.api.methods.Bank;
 import org.rev317.api.wrappers.hud.Item;
 
+/**
+ * 
+ * @author Everel
+ *
+ */
 public class DBank extends AbstractDebugger {
-	private boolean enabled = false;
+	private boolean enabled;
 
 	@Override
 	public void paint(Graphics g) {

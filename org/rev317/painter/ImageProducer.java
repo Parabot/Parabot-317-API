@@ -10,6 +10,10 @@ import java.awt.image.ImageObserver;
  */
 public abstract class ImageProducer implements ImageObserver {
 	
+	/**
+	 * Gets this imageproducer's image
+	 * @return image of this imageproducer
+	 */
 	public abstract Image getImage();
 
 }

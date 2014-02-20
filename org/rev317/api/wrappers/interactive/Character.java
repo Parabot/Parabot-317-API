@@ -21,7 +21,7 @@ import org.rev317.Loader;
  *
  */
 public class Character implements Locatable, Interactable {
-	private org.rev317.accessors.Character accessor = null;
+	private org.rev317.accessors.Character accessor;
 	
 	public Character(org.rev317.accessors.Character accessor) {
 		this.accessor = accessor;

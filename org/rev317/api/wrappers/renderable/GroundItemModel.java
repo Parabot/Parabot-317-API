@@ -8,7 +8,7 @@ import org.rev317.api.interfaces.Locatable;
  *
  */
 public final class GroundItemModel extends Model {
-	private Locatable locatable = null;
+	private Locatable locatable;
 
 	public GroundItemModel(final Locatable locatable, org.rev317.accessors.Model accessor) {
 		super(accessor);

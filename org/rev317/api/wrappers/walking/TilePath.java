@@ -13,7 +13,7 @@ import org.rev317.api.wrappers.scene.Tile;
  *
  */
 public final class TilePath {
-	private Tile[] tiles = null;
+	private Tile[] tiles;
 	
 	public TilePath(Tile[] tiles) {
 		this.tiles = tiles;

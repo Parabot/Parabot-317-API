@@ -19,11 +19,11 @@ import org.rev317.Loader;
  * 
  */
 public final class GroundItem implements Locatable, Interactable {
-	private org.rev317.accessors.GroundItem accessor = null;
-	private int x = 0;
-	private int y = 0;
+	private org.rev317.accessors.GroundItem accessor;
+	private int x;
+	private int y;
 
-	private GroundItemModel cachedModel = null;
+	private GroundItemModel cachedModel;
 
 	public GroundItem(org.rev317.accessors.GroundItem accessor, final int x,
 			final int y) {

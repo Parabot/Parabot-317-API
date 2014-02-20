@@ -7,8 +7,13 @@ import org.parabot.core.paint.AbstractDebugger;
 import org.rev317.api.methods.Game;
 import org.rev317.api.wrappers.hud.Tab;
 
+/**
+ * 
+ * @author Everel
+ *
+ */
 public class DTab extends AbstractDebugger {
-	private boolean enabled = false;
+	private boolean enabled;
 
 	@Override
 	public void paint(Graphics g) {

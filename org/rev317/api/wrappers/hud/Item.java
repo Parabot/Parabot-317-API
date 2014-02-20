@@ -11,6 +11,7 @@ import java.awt.*;
 public final class Item {
     public static final int TYPE_BANK = 1;
     public static final int TYPE_INVENTORY = 2;
+    
     private int id = -1;
     private int stackSize = 1;
     private int slot = -1;

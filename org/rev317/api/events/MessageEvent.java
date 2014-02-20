@@ -7,8 +7,8 @@ package org.rev317.api.events;
  */
 public final class MessageEvent {
 	private int type;
-	private String name = null;
-	private String message = null;
+	private String name;
+	private String message;
 
 	public static final int TYPE_GENERIC = 0;
 	public static final int TYPE_PLAYER = 2;

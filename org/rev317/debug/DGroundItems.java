@@ -14,7 +14,7 @@ import org.rev317.api.wrappers.scene.GroundItem;
  *
  */
 public class DGroundItems extends AbstractDebugger {
-	private boolean enabled = false;
+	private boolean enabled;
 
 	@Override
 	public void paint(Graphics g) {

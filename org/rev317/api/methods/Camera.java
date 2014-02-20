@@ -7,6 +7,8 @@ import org.rev317.api.wrappers.scene.Tile;
 
 /**
  * 
+ * Controls the Camera
+ * 
  * @author Everel, Unknown
  * 
  */

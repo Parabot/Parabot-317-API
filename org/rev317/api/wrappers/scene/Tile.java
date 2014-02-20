@@ -14,9 +14,9 @@ import org.rev317.Loader;
  * 
  */
 public final class Tile {
-	private int x = 0;
-	private int y = 0;
-	private int z = 0;
+	private int x;
+	private int y;
+	private int z;
 
 	public Tile(int x, int y) {
 		this.x = x;

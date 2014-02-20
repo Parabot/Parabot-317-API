@@ -10,8 +10,8 @@ import org.rev317.Loader;
  *
  */
 public final class ItemDef {
-	private org.rev317.accessors.ItemDef accessor = null;
 	private static HashMap<Integer, ItemDef> cache = new HashMap<Integer, ItemDef>();
+	private org.rev317.accessors.ItemDef accessor;
 
 	public ItemDef(org.rev317.accessors.ItemDef accessor) {
 		this.accessor = accessor;

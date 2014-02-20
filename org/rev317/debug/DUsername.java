@@ -7,8 +7,13 @@ import org.parabot.core.paint.PaintDebugger;
 import org.rev317.Loader;
 import org.rev317.accessors.Client;
 
+/**
+ * 
+ * @author Everel
+ *
+ */
 public class DUsername extends AbstractDebugger {
-	private boolean enabled = false;
+	private boolean enabled;
 
 	@Override
 	public void paint(Graphics g) {

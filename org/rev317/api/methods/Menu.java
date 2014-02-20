@@ -5,7 +5,7 @@ import java.awt.Rectangle;
 import java.util.regex.Pattern;
 
 import org.parabot.core.Context;
-import org.parabot.core.parsers.HookParser;
+import org.parabot.core.parsers.hooks.HookParser;
 import org.parabot.environment.api.utils.Time;
 import org.parabot.environment.input.Mouse;
 import org.rev317.accessors.Client;

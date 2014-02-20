@@ -18,12 +18,9 @@ import org.rev317.accessors.Client;
  */
 public abstract class Painter extends ImageProducer {
 
-	public final ImageGraphic game = new ImageGraphic(771, 531,
-			BufferedImage.TYPE_INT_RGB);
-	public final ImageGraphic paint = new ImageGraphic(771, 531,
-			BufferedImage.TYPE_INT_ARGB);
-	public final BufferedImage screen = new BufferedImage(771, 531,
-			BufferedImage.TYPE_INT_RGB);
+	public final ImageGraphic game;
+	public final ImageGraphic paint;
+	public final BufferedImage screen;
 
 	public final Object paintSync = new Object();
 	private boolean cacheCheck = false;
@@ -32,6 +29,12 @@ public abstract class Painter extends ImageProducer {
 	private static final HashMap<Context, Painter> paintMap = new HashMap<Context, Painter>();
 	
 	public Painter() {
+		game = new ImageGraphic(771, 531,
+				BufferedImage.TYPE_INT_RGB);
+		paint = new ImageGraphic(771, 531,
+				BufferedImage.TYPE_INT_ARGB);
+		screen = new BufferedImage(771, 531,
+				BufferedImage.TYPE_INT_RGB);
 		paintMap.put(Context.resolve(), this);
 	}
 

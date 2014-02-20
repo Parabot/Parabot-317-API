@@ -23,16 +23,17 @@ import org.rev317.Loader;
  *
  */
 public final class SceneObject implements Locatable, Interactable {
-	private SceneObjectTile accessor = null;
 	public static final int TYPE_WALL = 0; // object1
 	public static final int TYPE_WALLDECORATION = 1; // object2
 	public static final int TYPE_GROUNDDECORATION = 2; // object3
 	public static final int TYPE_GROUNDITEM = 3; // object4
 	public static final int TYPE_INTERACTIVE = 4; // object5
-	private int type = 0;
+	
+	private SceneObjectTile accessor;
+	private int type;
 	
 	// cached
-	private Model cachedModel = null;
+	private Model cachedModel;
 	
 	public SceneObject(SceneObjectTile accessor, int type) {
 		this.accessor = accessor;

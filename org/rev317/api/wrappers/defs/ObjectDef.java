@@ -10,8 +10,8 @@ import org.rev317.Loader;
  *
  */
 public final class ObjectDef {
-	private org.rev317.accessors.ObjectDef accessor = null;
 	private static HashMap<Integer, ObjectDef> cache = new HashMap<Integer, ObjectDef>();
+	private org.rev317.accessors.ObjectDef accessor;
 
 	public ObjectDef(org.rev317.accessors.ObjectDef accessor) {
 		this.accessor = accessor;

@@ -15,8 +15,8 @@ import java.awt.event.ActionListener;
  *
  */
 public final class BotMenu {
-	private JMenuBar bar = null;
-	private final PaintDebugger paintDebugger = Context.resolve().getPaintDebugger();
+	private JMenuBar bar;
+	private final PaintDebugger paintDebugger;
 	
 	private final ActionListener menuDebugItemListener = new ActionListener() {
 
@@ -32,6 +32,7 @@ public final class BotMenu {
 	};
 	
 	public BotMenu(final JMenuBar bar) {
+		paintDebugger = Context.resolve().getPaintDebugger();
 		this.bar = bar;
 	}
 	

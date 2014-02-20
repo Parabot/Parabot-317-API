@@ -10,13 +10,10 @@ import org.rev317.Loader;
 
 /**
  * 
- * @author Everel
- * @author Dane
- * @author Matt
+ * @author Everel, Dane, Matt
  *
  */
 public final class Interfaces {
-	
 	public static HashMap<Integer, Integer> parents = new HashMap<Integer, Integer>();
 
 	/**

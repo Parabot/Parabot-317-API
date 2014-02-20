@@ -7,8 +7,13 @@ import org.rev317.api.methods.Inventory;
 import org.rev317.api.wrappers.hud.Item;
 import org.rev317.api.wrappers.hud.Tab;
 
+/**
+ * 
+ * @author Everel
+ *
+ */
 public class DInventory extends AbstractDebugger {
-	private boolean enabled = false;
+	private boolean enabled;
 
 	@Override
 	public void paint(Graphics g) {

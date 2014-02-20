@@ -6,8 +6,13 @@ import org.parabot.core.paint.AbstractDebugger;
 import org.rev317.api.methods.Players;
 import org.rev317.api.wrappers.interactive.Player;
 
+/**
+ * 
+ * @author Everel
+ *
+ */
 public class DPlayers extends AbstractDebugger {
-	private boolean enabled = false;
+	private boolean enabled;
 
 	@Override
 	public void paint(Graphics g) {

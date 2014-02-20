@@ -11,7 +11,7 @@ import org.rev317.api.wrappers.interactive.Npc;
  *
  */
 public class DNpcs extends AbstractDebugger {
-	private boolean enabled = false;
+	private boolean enabled;
 
 	@Override
 	public void paint(Graphics g) {

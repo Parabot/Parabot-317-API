@@ -5,7 +5,7 @@ import java.awt.Rectangle;
 import java.util.Random;
 
 import org.parabot.core.Context;
-import org.parabot.core.parsers.HookParser;
+import org.parabot.core.parsers.hooks.HookParser;
 import org.rev317.Loader;
 import org.rev317.accessors.Client;
 import org.rev317.api.wrappers.scene.Tile;
@@ -25,8 +25,8 @@ public final class Calculations {
 	public static int[] COSINUS = new int[2048];
 	public static final Rectangle GAME3D_SCREEN = new Rectangle(0, 0, 516, 337);
 	
-	private static int minimapBaseX = 0;
-	private static int minimapBaseY = 0;
+	private static int minimapBaseX;
+	private static int minimapBaseY;
 	private static final Random RANDOM = new Random();
 	
 	static {

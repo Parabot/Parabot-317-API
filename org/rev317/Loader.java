@@ -26,9 +26,9 @@ import java.net.URL;
  * @author Everel
  *
  */
-@ServerManifest(author = "Everel & Paradox", name = "Server Name Here", type = Type.INJECTION, version = 0.4)
+@ServerManifest(author = "Everel & Paradox", name = "Server Name Here", type = Type.INJECTION, version = 0.5)
 public class Loader extends ServerProvider implements Opcodes {
-	private Applet applet = null;
+	private Applet applet;
 
 	/**
 	 * Inits/loads the applet so it's ready to be added to the game panel

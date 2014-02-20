@@ -6,7 +6,7 @@ package org.rev317.api.wrappers.defs;
  *
  */
 public final class NpcDef {
-	private org.rev317.accessors.NpcDef accessor = null;
+	private org.rev317.accessors.NpcDef accessor;
 	
 	public NpcDef(final org.rev317.accessors.NpcDef accessor) {
 		this.accessor = accessor;

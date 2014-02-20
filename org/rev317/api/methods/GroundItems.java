@@ -17,7 +17,7 @@ import org.rev317.Loader;
  * 
  */
 public final class GroundItems {
-	private static Client client = null;
+	private static Client client;
 	
 	private static final Comparator<GroundItem> NEAREST_SORTER = new Comparator<GroundItem>() {
 

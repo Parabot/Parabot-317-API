@@ -16,7 +16,7 @@ import org.rev317.api.wrappers.scene.Tile;
  * For bot developing testing only...
  */
 public class DMinimap extends AbstractDebugger {
-	private boolean enabled = false;
+	private boolean enabled;
 
 	@Override
 	public void paint(Graphics g) {

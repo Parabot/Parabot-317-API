@@ -17,10 +17,14 @@ import java.awt.image.BufferedImage;
  */
 public abstract class GameApplet extends Applet implements Runnable{
     private static final long serialVersionUID = 1L;
-    private ScriptEngine scriptEngine = ScriptEngine.getInstance();
-    private Painter painter = Painter.getInstance();
-
-    private boolean clientReady = false;
+    private ScriptEngine scriptEngine;
+    private Painter painter;
+    private boolean clientReady;
+    
+    public GameApplet() {
+    	this.scriptEngine = ScriptEngine.getInstance();
+    	this.painter = Painter.getInstance();
+    }
 
     @Override
     public Graphics getGraphics() {

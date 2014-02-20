@@ -13,7 +13,7 @@ import org.rev317.api.wrappers.renderable.Model;
  *
  */
 public final class Npc extends Character {
-	private org.rev317.accessors.Npc accessor = null;
+	private org.rev317.accessors.Npc accessor;
 
 	public Npc(org.rev317.accessors.Npc accessor) {
 		super(accessor);

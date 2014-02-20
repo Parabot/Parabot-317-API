@@ -6,8 +6,13 @@ import org.rev317.api.methods.Interfaces;
 
 import java.awt.*;
 
+/**
+ * 
+ * @author Paradox
+ *
+ */
 public class DInterfaces extends AbstractDebugger {
-    private boolean enabled = false;
+    private boolean enabled;
 
     @Override
     public void paint(Graphics g) {

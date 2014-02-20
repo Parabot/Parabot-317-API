@@ -16,7 +16,6 @@ import org.rev317.api.methods.Menu;
  * 
  */
 public class Interface {
-
 	private org.rev317.accessors.Interface accessor;
 
 	public Interface(org.rev317.accessors.Interface accessor) {

@@ -16,8 +16,8 @@ import org.rev317.api.methods.Calculations;
  * 
  */
 public abstract class Model {
-	protected org.rev317.accessors.Model accessor = null;
-	private int numFaces = 0;
+	protected org.rev317.accessors.Model accessor;
+	private int numFaces;
 
 	// cached
 	private int[] indices1;

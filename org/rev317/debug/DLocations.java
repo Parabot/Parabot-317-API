@@ -21,7 +21,7 @@ import org.rev317.api.wrappers.scene.Tile;
  * 
  */
 public class DLocations extends AbstractDebugger {
-	private boolean enabled = false;
+	private boolean enabled;
 
 	@Override
 	public void paint(Graphics g) {

@@ -10,7 +10,7 @@ import org.rev317.api.wrappers.scene.SceneObject;
  *
  */
 public final class SceneObjectModel extends Model {
-	private SceneObjectTile sceneObjectTileAccessor = null;
+	private SceneObjectTile sceneObjectTileAccessor;
 	
 	protected int[] x_base;
 	protected int[] z_base;

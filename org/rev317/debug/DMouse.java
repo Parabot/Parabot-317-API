@@ -7,8 +7,13 @@ import org.parabot.core.paint.AbstractDebugger;
 import org.parabot.core.paint.PaintDebugger;
 import org.parabot.environment.input.Mouse;
 
+/**
+ * 
+ * @author Everel
+ *
+ */
 public class DMouse extends AbstractDebugger {
-	private boolean enabled = false;
+	private boolean enabled ;
 
 	@Override
 	public void paint(Graphics g) {

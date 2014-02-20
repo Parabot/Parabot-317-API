@@ -8,7 +8,7 @@ import org.rev317.api.methods.Calculations;
  * 
  */
 public final class CharacterModel extends Model {
-	private org.rev317.accessors.Character charAccessor = null;
+	private org.rev317.accessors.Character charAccessor;
 
 	protected int[] x_base;
 	protected int[] z_base;

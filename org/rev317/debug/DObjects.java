@@ -6,8 +6,13 @@ import org.parabot.core.paint.AbstractDebugger;
 import org.rev317.api.methods.SceneObjects;
 import org.rev317.api.wrappers.scene.SceneObject;
 
+/**
+ * 
+ * @author Everel
+ *
+ */
 public class DObjects extends AbstractDebugger {
-	private boolean enabled = false;
+	private boolean enabled;
 
 	@Override
 	public void paint(Graphics g) {

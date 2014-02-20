@@ -3,6 +3,7 @@ package org.rev317.painter;
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 import java.awt.image.DataBufferInt;
+import java.util.Arrays;
 
 /**
  * 
@@ -10,13 +11,11 @@ import java.awt.image.DataBufferInt;
  * 
  */
 public class ImageGraphic {
+	private BufferedImage image;
+	private int[] pixels;
+	private int width, height;
 
-	BufferedImage image;
-	int[] pixels;
-	int width, height;
-
-	public ImageGraphic(int width, int height, int type)
-	{
+	public ImageGraphic(int width, int height, int type) {
 		this.width = width;
 		this.height = height;
 		this.image = new BufferedImage(width, height, type);
@@ -44,9 +43,7 @@ public class ImageGraphic {
 	}
 
 	public void clear() {
-		for (int i = 0; i < pixels.length; i++) {
-			pixels[i] = 0;
-		}
+		Arrays.fill(pixels, 0);
 	}
 
 }
