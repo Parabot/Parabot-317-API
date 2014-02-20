@@ -22,6 +22,8 @@ public interface Client extends RSApplet {
 
 	public int getPlane();
 
+    public int[] getSettings();
+
 	public byte[][][] getSceneFlags();
 
 	public int[][][] getTileOffsets();
