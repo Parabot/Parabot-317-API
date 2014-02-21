@@ -1,19 +1,18 @@
 package org.rev317.api.wrappers.interactive;
 
-import java.awt.Color;
-import java.awt.Graphics;
-import java.awt.Point;
-
+import org.rev317.Loader;
 import org.rev317.accessors.Client;
 import org.rev317.api.interfaces.Interactable;
 import org.rev317.api.interfaces.Locatable;
 import org.rev317.api.methods.Calculations;
 import org.rev317.api.methods.Game;
 import org.rev317.api.methods.Menu;
+import org.rev317.api.methods.Players;
 import org.rev317.api.wrappers.renderable.CharacterModel;
 import org.rev317.api.wrappers.renderable.Model;
 import org.rev317.api.wrappers.scene.Tile;
-import org.rev317.Loader;
+
+import java.awt.*;
 
 /**
  * 

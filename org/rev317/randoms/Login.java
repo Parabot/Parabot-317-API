@@ -2,7 +2,7 @@ package org.rev317.randoms;
 
 import org.parabot.environment.randoms.Random;
 import org.rev317.api.methods.Game;
-import org.rev317.randoms.ui.Controller;
+import org.rev317.randoms.ui.UIController;
 
 /**
  * User: Jeroen
@@ -10,9 +10,13 @@ import org.rev317.randoms.ui.Controller;
  * Time: 00:49
  */
 public class Login implements Random {
+
+    public static String username;
+    public static String password;
+
     @Override
     public boolean activate() {
-        return !Game.isLoggedIn() && Controller.randoms.get("Auto login") == true;
+        return !Game.isLoggedIn() && UIController.randoms.get("Auto login") == true;
     }
 
     @Override

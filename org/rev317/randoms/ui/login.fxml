@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="204.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.rev317.randoms.ui.LoginController">
+<children><Label layoutX="32.353271484375" layoutY="24.0" text="Username" /><Label layoutX="34.0" layoutY="66.0" text="Password" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" /><PasswordField fx:id="passwordField" layoutX="141.96875" layoutY="61.0" /><TextField fx:id="usernameField" layoutX="141.96875" layoutY="19.0" /><Button layoutX="528.0" layoutY="164.0" mnemonicParsing="false" text="Save" />
+</children></Pane>

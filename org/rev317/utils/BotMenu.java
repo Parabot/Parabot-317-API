@@ -5,6 +5,7 @@ import org.parabot.core.Context;
 import org.parabot.core.paint.PaintDebugger;
 import org.rev317.debug.*;
 import org.rev317.input.InputHandler;
+import org.rev317.randoms.ui.LoginUI;
 import org.rev317.randoms.ui.RandomUI;
 
 import javax.swing.*;
@@ -112,6 +113,8 @@ public final class BotMenu {
 
         JMenu other = new JMenu("Other");
         final JMenuItem randoms = new JMenuItem("Randoms");
+        final JMenuItem autoLogin = new JMenuItem("Auto login");
+
         randoms.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -131,7 +134,28 @@ public final class BotMenu {
                 });
             }
         });
+
+        autoLogin.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                SwingUtilities.invokeLater(new Runnable() {
+                    @Override
+                    public void run() {
+                        JFrame frame = new JFrame();
+                        JFXPanel jfxp = new JFXPanel();
+                        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                        frame.getContentPane().add(jfxp);
+                        frame.setSize(600, 400);
+                        frame.setLocationRelativeTo(null);
+                        frame.setVisible(false);
+
+                        LoginUI.main();
+                    }
+                });
+            }
+        });
         other.add(randoms);
+        other.add(autoLogin);
 
         bar.add(debug);
         bar.add(input);

@@ -19,7 +19,7 @@ import java.util.ResourceBundle;
  * Date: 19/02/14
  * Time: 23:47
  */
-public class Controller implements Initializable {
+public class UIController implements Initializable {
 
     @FXML
     private Button submit;

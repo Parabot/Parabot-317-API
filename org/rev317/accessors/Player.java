@@ -5,5 +5,4 @@ public interface Player extends Character {
 	public String getName();
 
     public int[] getEquipment();
-
 }
