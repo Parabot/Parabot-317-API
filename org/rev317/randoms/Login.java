@@ -2,7 +2,7 @@ package org.rev317.randoms;
 
 import org.parabot.environment.randoms.Random;
 import org.rev317.api.methods.Game;
-import org.rev317.randoms.ui.UIController;
+import org.rev317.randoms.ui.controllers.UIController;
 
 /**
  * User: Jeroen

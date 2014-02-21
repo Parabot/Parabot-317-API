@@ -26,7 +26,7 @@ import java.net.URL;
  * @author Everel
  *
  */
-@ServerManifest(author = "Everel & Paradox", name = "Server Name Here", type = Type.INJECTION, version = 0.5)
+@ServerManifest(author = "Everel & Paradox", name = "Server Name Here", type = Type.INJECTION, version = 0.6)
 public class Loader extends ServerProvider implements Opcodes {
 	private Applet applet;
 

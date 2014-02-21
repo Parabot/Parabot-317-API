@@ -14,7 +14,7 @@ import java.io.IOException;
  * Date: 19/02/14
  * Time: 21:48
  */
-public class RandomUI extends Application{
+public class RandomUI extends Application {
 
     public static Stage pStage;
 
@@ -27,20 +27,20 @@ public class RandomUI extends Application{
     }
 
     //fx:controller="org.rev317.randoms.Controller"
-        @Override
-        public void start(final Stage primaryStage) {
-            try {
-                FXMLLoader loader = new FXMLLoader(RandomUI.class.getResource("ui.fxml"));
-                Pane page = (Pane) loader.load();
-                Scene scene = new Scene(page);
-                primaryStage.setTitle("Random settings");
-                primaryStage.setScene(scene);
-                primaryStage.setResizable(false);
-                pStage = primaryStage;
-                primaryStage.show();
-            } catch (IOException e) {
-                System.err.println("Error loading ui.fxml!");
-                e.printStackTrace();
-            }
+    @Override
+    public void start(final Stage primaryStage) {
+        try {
+            FXMLLoader loader = new FXMLLoader(RandomUI.class.getResource("fxml/ui.fxml"));
+            Pane page = (Pane) loader.load();
+            Scene scene = new Scene(page);
+            primaryStage.setTitle("Random settings");
+            primaryStage.setScene(scene);
+            primaryStage.setResizable(false);
+            pStage = primaryStage;
+            primaryStage.show();
+        } catch (IOException e) {
+            System.err.println("Error loading ui.fxml!");
+            e.printStackTrace();
+        }
     }
 }

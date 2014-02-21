@@ -1,4 +1,4 @@
-package org.rev317.randoms.ui;
+package org.rev317.randoms.ui.controllers;
 
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -8,6 +8,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import org.rev317.randoms.Login;
+import org.rev317.randoms.ui.LoginUI;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -34,6 +35,7 @@ public class LoginController implements Initializable {
             public void handle(ActionEvent actionEvent) {
                 Login.username = usernameField.getText();
                 Login.password = passwordField.getText();
+                LoginUI.pStage.close();
             }
         });
     }

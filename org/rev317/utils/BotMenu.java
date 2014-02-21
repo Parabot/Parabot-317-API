@@ -141,13 +141,13 @@ public final class BotMenu {
                 SwingUtilities.invokeLater(new Runnable() {
                     @Override
                     public void run() {
-                        JFrame frame = new JFrame();
-                        JFXPanel jfxp = new JFXPanel();
-                        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                        frame.getContentPane().add(jfxp);
-                        frame.setSize(600, 400);
-                        frame.setLocationRelativeTo(null);
-                        frame.setVisible(false);
+                        JFrame frameLogin = new JFrame();
+                        JFXPanel jfxpLogin = new JFXPanel();
+                        frameLogin.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                        frameLogin.getContentPane().add(jfxpLogin);
+                        frameLogin.setSize(600, 400);
+                        frameLogin.setLocationRelativeTo(null);
+                        frameLogin.setVisible(false);
 
                         LoginUI.main();
                     }
