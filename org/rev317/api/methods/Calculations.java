@@ -9,7 +9,6 @@ import org.parabot.core.parsers.hooks.HookParser;
 import org.rev317.Loader;
 import org.rev317.accessors.Client;
 import org.rev317.api.wrappers.scene.Tile;
-import org.rev317.utils.Reader;
 
 
 /**
