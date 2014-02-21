@@ -327,4 +327,13 @@ public class Bank {
         return Loader.getClient().getOpenInterfaceId() == 23350;
     }
 
+    /**
+     * Determines if noting is enable
+     *
+     * @return <b>true</b> if noting is enabled
+     */
+    public static boolean isNoting() {
+        return Settings.getInstance().getSetting(115) == 1;
+    }
+
 }
