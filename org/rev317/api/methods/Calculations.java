@@ -33,7 +33,7 @@ public final class Calculations {
 			SINUS[i] = (int) (65536.0D * Math.sin(i * 0.0030679615D));
 			COSINUS[i] = (int) (65536.0D * Math.cos(i * 0.0030679615D));
 		}
-		HookParser parser = Context.resolve().getHookParser();
+		HookParser parser = Context.getInstance().getHookParser();
 		final String minimapX = parser.getConstants().get("minimapX");
 		final String minimapY = parser.getConstants().get("minimapY");
 		minimapBaseX = Integer.parseInt(minimapX);

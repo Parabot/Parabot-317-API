@@ -20,7 +20,7 @@ public class DAnimation extends AbstractDebugger {
 		if(!Game.isLoggedIn()) {
 			return;
 		}
-		Context.resolve().getPaintDebugger().addLine("Animation: " + Players.getLocal().getAnimation());
+		Context.getInstance().getPaintDebugger().addLine("Animation: " + Players.getLocal().getAnimation());
 	}
 
 	@Override

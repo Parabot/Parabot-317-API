@@ -23,7 +23,7 @@ public final class Menu {
 	
 	static {
 		// parse menu screen offsets
-		HookParser parser = Context.resolve().getHookParser();
+		HookParser parser = Context.getInstance().getHookParser();
 		final String[] offsets = parser.getConstants().get("menuScreenOffsets").split(",");
 		for(int i = 0; i < offsets.length; i++) {
 			menuScreenOffsets[i] = Integer.parseInt(offsets[i]);

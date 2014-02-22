@@ -20,7 +20,7 @@ public class DTab extends AbstractDebugger {
 		if(!Game.isLoggedIn()) {
 			return;
 		}
-		Context.resolve().getPaintDebugger().addLine(Tab.getOpened().getName());
+		Context.getInstance().getPaintDebugger().addLine(Tab.getOpened().getName());
 	}
 
 	@Override

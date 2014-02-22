@@ -37,7 +37,7 @@ public class Loader extends ServerProvider implements Opcodes {
 	public Applet fetchApplet() {
 		// load the applet, use the ASMClassLoader to load our injected classes
 		try {
-			final Context context = Context.resolve();
+			final Context context = Context.getInstance();
 			//context.getClassPath().dump("dumped.jar");
 			final ASMClassLoader classLoader = context.getASMClassLoader();
 			final Class<?> clientClass = classLoader.loadClass(Reader.readProvider("clientClass"));
@@ -94,7 +94,7 @@ public class Loader extends ServerProvider implements Opcodes {
 	
 	
 	public static Client getClient() {
-		return (Client) Context.resolve().getClient();
+		return (Client) Context.getInstance().getClient();
 	}
 	
 	@Override

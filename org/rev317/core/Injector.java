@@ -30,7 +30,7 @@ public class Injector implements Opcodes {
 
 	public static void injectPaint() {
 
-		final HashMap<String, String> constants = Context.resolve()
+		final HashMap<String, String> constants = Context.getInstance()
 				.getHookParser().getConstants();
 
 		ClassNode cg = ASMUtils.getClass(constants.get("ImageProducer"));

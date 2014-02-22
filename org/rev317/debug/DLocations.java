@@ -32,7 +32,7 @@ public class DLocations extends AbstractDebugger {
 		final Player p = Players.getLocal();
 		final Tile t = p.getLocation();
 		final Point point = Calculations.tileToMinimap(t);
-		final PaintDebugger debugger = Context.resolve().getPaintDebugger();
+		final PaintDebugger debugger = Context.getInstance().getPaintDebugger();
 		debugger.addLine("MapBase: (" + client.getBaseX() + ", "
 				+ client.getBaseY() + ")");
 		debugger.addLine("Offset: (" + t.getRegionX() + ", " + t.getRegionX()

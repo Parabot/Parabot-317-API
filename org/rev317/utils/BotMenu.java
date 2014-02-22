@@ -35,7 +35,7 @@ public final class BotMenu {
 	};
 	
 	public BotMenu(final JMenuBar bar) {
-		paintDebugger = Context.resolve().getPaintDebugger();
+		paintDebugger = Context.getInstance().getPaintDebugger();
 		this.bar = bar;
 	}
 	

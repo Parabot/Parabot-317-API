@@ -18,7 +18,7 @@ public class DMenu extends AbstractDebugger {
 
 	@Override
 	public void paint(Graphics g) {
-		final Context context = Context.resolve();
+		final Context context = Context.getInstance();
 		final PaintDebugger debugger = context.getPaintDebugger();
 		for(final String menuAction : Menu.getActions()) {
 			debugger.addLine(menuAction);
