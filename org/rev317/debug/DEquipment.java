@@ -1,10 +1,10 @@
 package org.rev317.debug;
 
+import java.awt.Graphics;
+
 import org.parabot.core.paint.AbstractDebugger;
 import org.rev317.api.methods.Equipment;
 import org.rev317.api.wrappers.hud.Tab;
-
-import java.awt.*;
 
 /**
  * 
@@ -26,7 +26,7 @@ class DEquipment extends AbstractDebugger {
 	}
 
 	@Override
-    public void paint(Graphics g) {
+	public void paint(Graphics g) {
 		if (Tab.getOpened() != Tab.EQUIPMENT) {
 			return;
 		}
@@ -36,5 +36,5 @@ class DEquipment extends AbstractDebugger {
 			}
 		}
 	}
-    
+	
 }
