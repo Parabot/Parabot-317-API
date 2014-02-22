@@ -9,7 +9,6 @@ import org.parabot.environment.servers.ServerManifest;
 import org.parabot.environment.servers.ServerProvider;
 import org.parabot.environment.servers.Type;
 import org.rev317.accessors.Client;
-import org.rev317.core.Injector;
 import org.rev317.script.ScriptEngine;
 import org.rev317.utils.BotMenu;
 import org.rev317.utils.Reader;
@@ -58,9 +57,6 @@ public class Loader extends ServerProvider implements Opcodes {
 		AddInterfaceAdapter.setAccessorPackage("org/rev317/accessors/");
 		// default injection is done by bot, it basically parses the hooks file
 		super.injectHooks();
-		
-		// custom injections here
-		Injector.injectPaint();
 	}
 
 	@Override
