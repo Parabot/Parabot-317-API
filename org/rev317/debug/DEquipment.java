@@ -1,10 +1,10 @@
 package org.rev317.debug;
 
-import java.awt.Graphics;
-
 import org.parabot.core.paint.AbstractDebugger;
 import org.rev317.api.methods.Equipment;
 import org.rev317.api.wrappers.hud.Tab;
+
+import java.awt.*;
 
 /**
  * 
