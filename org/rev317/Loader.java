@@ -44,8 +44,6 @@ public class Loader extends ServerProvider implements Opcodes {
             //final Class<?> clientClass = classLoader.loadClass("client");
 			Object instance = clientClass.newInstance();
 			applet = (Applet) instance;
-			applet.init();
-			applet.start();
 			return applet;
 		} catch (Exception e) {
 			throw new RuntimeException(e);
