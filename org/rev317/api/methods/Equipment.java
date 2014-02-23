@@ -32,6 +32,10 @@ public enum Equipment {
     }
 
     public int getEquippedId() {
-        return Players.getLocal().getEquipment()[getIndex()];
+        if (Players.getLocal().getEquipment()[getIndex()] >= 512){
+            return Players.getLocal().getEquipment()[getIndex()] - 512;
+        }else{
+            return 0;
+        }
     }
 }
