@@ -47,6 +47,11 @@ public class Loader extends ServerProvider implements Opcodes {
 		}
 	}
 
+    @Override
+    public void init(){
+
+    }
+
 	@Override
 	public void injectHooks() {
 		AddInterfaceAdapter.setAccessorPackage("org/rev317/accessors/");
