@@ -80,6 +80,9 @@ public final class BotMenu {
 
         debug.add(newDebugItem("Interfaces"));
         paintDebugger.addDebugger("Interfaces", new DInterfaces());
+
+        debug.add(newDebugItem("Equipment"));
+        paintDebugger.addDebugger("Equipment", new DEquipment());
 		
 		
 		JMenu input = new JMenu("Input");

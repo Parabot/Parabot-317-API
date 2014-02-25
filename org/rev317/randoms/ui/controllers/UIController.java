@@ -37,7 +37,7 @@ public class UIController implements Initializable {
         if (randoms.isEmpty()) {
             for (String s : new String[]{"PKHonor - Bob's island", "PKHonor - Mysterious old man", "PKHonor - Sandwich lady", "PKHonor - Auto login"}) {
                 if (s.split(" - ")[0].toLowerCase().equals(Game.getServerName().toLowerCase())) {
-                    randoms.put(s, false);
+                    //randoms.put(s, false);
                 }
             }
         }
