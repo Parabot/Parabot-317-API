@@ -1,7 +1,7 @@
 package org.rev317.api.wrappers.hud;
 
+import org.parabot.core.Context;
 import org.rev317.api.methods.Menu;
-import org.rev317.utils.Reader;
 
 import java.awt.*;
 
@@ -78,7 +78,7 @@ public final class Item {
                 int y = 228 + row * 36;
                 return new Point(x, y);
             case TYPE_BANK:
-                if (Integer.parseInt(Reader.readProvider("bankTabs")) == 1) {
+                if (Context.getInstance().getServerProviderInfo().getBankTabs() == 1) {
                     final Point first_slot_point = new Point(57, 105);
                     final Point slot_distance = new Point(44, 40);
                     final int length = 10;

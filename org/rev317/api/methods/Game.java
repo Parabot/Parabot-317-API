@@ -1,8 +1,8 @@
 package org.rev317.api.methods;
 
+import org.parabot.core.Context;
 import org.rev317.Loader;
 import org.rev317.accessors.CollisionMap;
-import org.rev317.utils.Reader;
 
 import java.awt.*;
 
@@ -96,6 +96,6 @@ public final class Game {
      * @return server name
      */
     public static final String getServerName(){
-        return Reader.readProvider("serverName");
+        return Context.getInstance().getServerProviderInfo().getServerName();
     }
 }
