@@ -2,8 +2,12 @@ package org.rev317;
 
 import org.objectweb.asm.Opcodes;
 import org.parabot.core.Context;
+import org.parabot.core.Directories;
 import org.parabot.core.asm.ASMClassLoader;
 import org.parabot.core.asm.adapters.AddInterfaceAdapter;
+import org.parabot.core.desc.ServerProviderInfo;
+import org.parabot.core.ui.components.VerboseLoader;
+import org.parabot.environment.api.utils.WebUtil;
 import org.parabot.environment.scripts.Script;
 import org.parabot.environment.servers.ServerManifest;
 import org.parabot.environment.servers.ServerProvider;
@@ -13,7 +17,9 @@ import org.rev317.script.ScriptEngine;
 import org.rev317.utils.BotMenu;
 
 import javax.swing.*;
+
 import java.applet.Applet;
+import java.io.File;
 import java.net.URL;
 
 /**
@@ -54,7 +60,14 @@ public class Loader extends ServerProvider implements Opcodes {
 
 	@Override
 	public URL getJar() {
-		return Context.getInstance().getServerProviderInfo().getClient();
+		ServerProviderInfo serverProvider = Context.getInstance().getServerProviderInfo();
+		
+		File target = new File(Directories.getCachePath(), serverProvider.getClientCRC32() + ".jar");
+		if(!target.exists()) {
+			WebUtil.downloadFile(serverProvider.getClient(), target, VerboseLoader.get());
+		}
+		
+		return WebUtil.toURL(target);
 	}
 
 	@Override
