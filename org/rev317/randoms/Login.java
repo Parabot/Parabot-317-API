@@ -19,7 +19,7 @@ import java.awt.*;
 public class Login implements Random {
     @Override
     public boolean activate() {
-        return !Game.isLoggedIn() && UIController.randoms.get("Auto login") == true;
+        return !Game.isLoggedIn() && UIController.randoms.get("Auto login");
     }
 
     @Override
