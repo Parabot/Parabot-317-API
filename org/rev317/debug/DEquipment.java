@@ -11,7 +11,7 @@ import java.awt.*;
  * @author Paradox, Demmonic
  *
  */
-class DEquipment extends AbstractDebugger {
+public class DEquipment extends AbstractDebugger {
 	
 	private boolean enabled = false;
 	
