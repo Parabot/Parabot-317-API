@@ -50,6 +50,12 @@ public class Loader extends ServerProvider implements Opcodes {
 			throw new RuntimeException(e);
 		}
 	}
+	
+	
+    	@Override
+    	public void init(){
+	
+    	}
 
 	@Override
 	public void injectHooks() {
